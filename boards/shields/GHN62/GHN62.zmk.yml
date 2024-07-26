@@ -1,0 +1,10 @@
+file_format: "1"
+id: ghn62
+name: GHN62
+type: shield
+url: https://github.com/gehennaXXIV/GHN-GHN62
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - GHN62
