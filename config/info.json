@@ -1,4 +1,6 @@
 {
+  "id": "ghn_62",
+  "name": "ghn_62",
   "keyboard_name": "GHN62",
   "url": "",
   "maintainer": "GHN",
@@ -69,5 +71,6 @@
         { "x": 13.75, "y":  4.5, "label": "4,12" }
       ]
     }
-  }
+  },
+  "sensors": []
 }
