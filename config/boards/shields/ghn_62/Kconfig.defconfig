@@ -1,6 +1,6 @@
 if SHIELD_MY_BOARD
 
 config ZMK_KEYBOARD_NAME
-    default "GHN62"
+    default "GHN_62"
 
 endif

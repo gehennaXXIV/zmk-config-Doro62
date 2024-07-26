@@ -1,2 +1,0 @@
-config SHIELD_GHN62
-    def_bool $(shields_list_contains,GHN62)

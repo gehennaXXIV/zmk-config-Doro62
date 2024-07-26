@@ -7,4 +7,4 @@ requires: [pro_micro]
 features:
   - keys
 siblings:
-  - ghn62
+  - ghn_62
