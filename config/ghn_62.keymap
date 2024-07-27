@@ -3,24 +3,55 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        SG: SG {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp C>;
+            label = "SG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSLASH  &kp HOME  &kp SPACE  &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp ENTER  &bt BT_CLR_ALL  &kp SPACE  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp UP  &bt BT_SEL 0  &kp SPACE  &kp LCTRL  &mo 1  &kp LALT  &kp SPACE  &kp BSPC  &mo 2  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp ESC    &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &kp N6  &kp N7    &kp N8  &kp N9     &kp N0    &kp MINUS      &kp EQUAL
+&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp Y   &kp U     &kp I   &kp O      &kp P     &kp BACKSLASH  &kp HOME
+&kp SPACE  &kp CAPS   &kp A   &kp S     &kp D      &kp F   &kp G   &kp H     &kp J   &kp K      &kp L     &kp ENTER      &kp PAGE_UP
+&kp SPACE  &kp LSHFT  &kp Z   &kp X     &kp C      &kp V   &kp B   &kp N     &kp M   &kp COMMA  &kp DOT   &kp UP         &kp PAGE_DOWN
+&kp SPACE  &kp LCTRL  &mo 1   &kp LALT  &kp SPACE                  &kp BSPC          &mo 2      &kp LEFT  &kp DOWN       &kp RIGHT
             >;
         };
 
-        layer_1 {
+        Lower {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2            &kp F3      &kp F4         &kp F5  &kp F6               &kp F7  &kp F8  &kp F9            &kp F10            &kp F11  &kp F12
+&trans  &trans  &trans            &trans      &trans         &trans  &trans               &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans   &trans
+&trans  &trans  &trans            &trans      &trans         &trans  &trans               &trans  &trans  &kp SEMICOLON     &kp APOSTROPHE     &trans   &trans
+&trans  &trans  &kp C_PLAY_PAUSE  &kp C_MUTE  &kp LC(LG(V))  &trans  &kp LA(PRINTSCREEN)  &trans  &trans  &trans            &kp SLASH          &trans   &trans
+&trans  &trans  &trans            &trans      &trans                                      &trans          &trans            &trans             &trans   &trans
             >;
         };
 
-        layer_2 {
+        Raise {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &tog 3  &trans  &trans  &bt BT_SEL 0
+&trans  &trans  &trans  &trans  &trans                  &kp LC(LA(DELETE))          &trans  &trans  &trans  &trans
+            >;
+        };
+
+        playpex {
+            bindings = <
+&kp ESC    &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &kp N6  &kp N7  &kp N8  &kp N9     &kp N0    &kp MINUS      &kp EQUAL
+&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp Y   &kp U   &kp I   &kp O      &kp P     &kp BACKSLASH  &kp HOME
+&kp SPACE  &kp CAPS   &kp A   &kp S     &kp D      &kp F   &kp G   &kp H   &kp J   &kp K      &kp L     &kp ENTER      &kp PAGE_UP
+&kp SPACE  &kp LSHFT  &kp Z   &kp X     &kp C      &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT   &kp UP         &kp PAGE_DOWN
+&kp SPACE  &kp LCTRL  &mo 1   &kp LALT  &kp SPACE                  &SG             &mo 2      &kp LEFT  &kp DOWN       &kp RIGHT
             >;
         };
     };
