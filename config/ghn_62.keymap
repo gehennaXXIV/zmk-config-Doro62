@@ -9,14 +9,14 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp C>;
             label = "SG";
-            tap-ms = <4>;
+            tap-ms = <6>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Default {
             bindings = <
 &kp ESC     &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &kp N6  &kp N7    &kp N8  &kp N9     &kp N0    &kp MINUS      &kp EQUAL
 &kp TAB     &kp Q      &kp W   &kp E     &kp R      &kp T   &kp Y   &kp U     &kp I   &kp O      &kp P     &kp BACKSLASH  &kp HOME
@@ -41,7 +41,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans            &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &trans  &kp SEMICOLON     &kp SINGLE_QUOTE   &trans  &bt BT_CLR_ALL
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &tog 0  &tog 3            &kp SLASH          &trans  &bt BT_SEL 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans              &to 0   &to 3             &kp SLASH          &trans  &bt BT_SEL 0
 &trans  &trans  &trans  &trans  &trans                  &kp LC(LA(DELETE))          &trans            &trans             &trans  &trans
             >;
         };
