@@ -1,10 +1,10 @@
 file_format: "1"
 id: doro62
-name: GHN62
+name: Doro62
 type: shield
 url: https://github.com/gehennaXXIV/GHN-Doro62
 requires: [pro_micro]
 features:
   - keys
 siblings:
-  - ghn62
+  - doro62
